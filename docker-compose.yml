@@ -1,0 +1,29 @@
+version: '1'
+
+services:
+  discuz:
+    build: discuz/
+    volumes:
+      - ./discuz/html:/var/www/html:rwx
+    ports:
+      - "80:80"
+    networks:
+      - docker_discuz
+
+  mariadb:
+    build: mariadb/
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=discuz
+      - MYSQL_USER=discuz
+      - MYSQL_PASSWORD=discuz
+    volumes:
+      - ./mariadb/database:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - docker_discuz
+
+networks:
+  docker_discuz:
+    driver: bridge
