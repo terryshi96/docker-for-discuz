@@ -1,2 +1,3 @@
-FROM php:7.0-apache
-RUN  apt-get update && apt-get install -y curl libcurl4-gnutls-dev libpng12-dev && docker-php-ext-install -j$(nproc) curl gd pdo pdo_mysql mbstring mysqli
+FROM php:5.6-apache
+COPY config/php.ini /usr/local/etc/php/
+RUN  apt-get update && apt-get install -y libpng12-dev && docker-php-ext-install -j$(nproc) gd mysqli

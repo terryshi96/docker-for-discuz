@@ -5,7 +5,6 @@ services:
     build: discuz/
     volumes:
       - ./discuz/html:/var/www/html
-      - ./discuz/config:/usr/local/etc/php
     ports:
       - "80:80"
     networks:

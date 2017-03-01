@@ -18,6 +18,8 @@ mysql configuration
 port mapping
 ```
 
+##make sure database host is mariadb 
+
 ##use nginx as proxy
 ```
 upstream your_domain_name {
