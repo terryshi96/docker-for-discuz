@@ -23,6 +23,7 @@ port mapping
 
 
 ## nignx
+```
 upstream your_domain_name {
     server 127.0.0.1:port;
 }
@@ -40,3 +41,4 @@ server
     }
 
 }
+```
