@@ -3,6 +3,7 @@ docker-compose file for discuz
 
 ##Usage
 ```
+chmod -R 777 discuz/html
 docker-compose up -d
 and visit localhost:port to install
 ```
@@ -18,16 +19,4 @@ mysql configuration
 port mapping
 ```
 
-##make sure database host is mariadb 
-
-##use nginx as proxy
-```
-upstream your_domain_name {
-    server discuz_server_ip:port weight=10;
-}
-      server
-      {
-              listen       80;
-              server_name your_domain_name;
-      }
-```
+##make sure database host is mariadb

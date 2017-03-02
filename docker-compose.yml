@@ -19,8 +19,8 @@ services:
       - MYSQL_PASSWORD=discuz
     volumes:
       - ./mariadb/database:/var/lib/mysql
-    ports:
-      - "3306:3306"
+    # ports:
+    #   - "3306:3306"
     networks:
       - docker_discuz
 
