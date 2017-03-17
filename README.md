@@ -1,14 +1,14 @@
 # docker-for-discuz
 docker-compose file for discuz
 
-##Usage
+## Usage
 ```
 chmod -R 777 discuz/html
 docker-compose up -d
 and visit localhost:port to install
 ```
 
-##configuration
+## configuration
 ```
 discuz/config/php.ini is for php
 discuz/html  is the source code and discuz configuration
@@ -19,7 +19,7 @@ mysql configuration
 port mapping
 ```
 
-##make sure database host is mariadb
+## make sure database host is mariadb
 
 
 ## nignx
